@@ -229,3 +229,186 @@ where city like '%a'
            or city like '%u';
 ```
 <br>
+
+## Weather Observation Station 8.
+Solved on 2024.07.10  
+[SQl - Weather Observation Station 8.](https://www.hackerrank.com/challenges/weather-observation-station-8/problem?isFullScreen=true)
+> Q. Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
+The STATION table is described as follows:
+    <p align="center">
+    <img src="figure/station_table.png" width="25%" height="25%">
+    </p>
+
+A.
+```sql
+select distinct city
+from station
+where (city like 'a%'
+        or city like 'e%'
+        or city like 'i%'
+        or city like 'o%'
+        or city like 'u%')
+    and
+      (city like '%a'
+        or city like '%e'
+        or city like '%i'
+        or city like '%o'
+        or city like '%u');
+```
+<br>
+
+## Weather Observation Station 9.
+Solved on 2024.07.10  
+[SQl - Weather Observation Station 9.](https://www.hackerrank.com/challenges/weather-observation-station-9/problem?isFullScreen=true)
+> Q. Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+The STATION table is described as follows:
+    <p align="center">
+    <img src="figure/station_table.png" width="25%" height="25%">
+    </p>
+
+A.
+```sql
+select distinct city
+from station
+where not (city like 'a%'
+        or city like 'e%'
+        or city like 'i%'
+        or city like 'o%'
+        or city like 'u%');
+```
+<br>
+
+
+## Weather Observation Station 10.
+Solved on 2024.07.10  
+[SQl - Weather Observation Station 10.](https://www.hackerrank.com/challenges/weather-observation-station-10/problem?isFullScreen=true)
+> Q. Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+The STATION table is described as follows:
+    <p align="center">
+    <img src="figure/station_table.png" width="25%" height="25%">
+    </p>
+
+A.
+```sql
+select distinct city
+from station
+where not (city like '%a'
+        or city like '%e'
+        or city like '%i'
+        or city like '%o'
+        or city like '%u');
+```
+<br>
+
+## Weather Observation Station 11.
+Solved on 2024.07.10  
+[SQl - Weather Observation Station 11.](https://www.hackerrank.com/challenges/weather-observation-station-11/problem?isFullScreen=true)
+> Q. Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
+The STATION table is described as follows:
+    <p align="center">
+    <img src="figure/station_table.png" width="25%" height="25%">
+    </p>
+
+A.
+```sql
+select distinct city
+from station
+where 
+        (not (city like 'a%'
+                or city like 'e%'
+                or city like 'i%'
+                or city like 'o%'
+                or city like 'u%'))
+        or
+        (not (city like '%a'
+                or city like '%e'
+                or city like '%i'
+                or city like '%o'
+                or city like '%u'));
+```
+<br>
+
+## Weather Observation Station 12.
+Solved on 2024.07.10  
+[SQl - Weather Observation Station 12.](https://www.hackerrank.com/challenges/weather-observation-station-12/problem?isFullScreen=true)
+> Q. Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
+The STATION table is described as follows:
+    <p align="center">
+    <img src="figure/station_table.png" width="25%" height="25%">
+    </p>
+
+A.
+```sql
+select distinct city
+from station
+where 
+        (not (city like 'a%'
+                or city like 'e%'
+                or city like 'i%'
+                or city like 'o%'
+                or city like 'u%'))
+        and
+        (not (city like '%a'
+                or city like '%e'
+                or city like '%i'
+                or city like '%o'
+                or city like '%u'));
+```
+<br>
+
+## Higher Than 75 Marks.
+Solved on 2024.07.10  
+[SQl - Higher Than 75 Marks.](https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true)
+> Q. Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+The STUDENTS table is described as follows:
+    <p align="center">
+    <img src="figure/student_table.png" width="25%" height="25%">
+    </p>
+The Name column only contains uppercase (A-Z) and lowercase (a-z) letters.
+
+A.
+```sql
+select name
+from students
+where marks > 75
+order by mid(name, -3) asc, id asc;
+```
+<br>
+
+## Employee Salaries.
+Solved on 2024.07.10  
+[SQl - Employee Salaries.](https://www.hackerrank.com/challenges/salary-of-employees/problem?isFullScreen=true)
+> Q. Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than  per month who have been employees for less than  months. Sort your result by ascending employee_id.
+The Employee table containing employee data for a company is described as follows:
+    <p align="center">
+    <img src="figure/employee_table.png" width="25%" height="25%">
+    </p>
+where employee_id is an employee's ID number, name is their name, months is the total number of months they've been working for the company, and salary is the their monthly salary.
+
+A.
+```sql
+select name
+from employee
+where salary>2000
+    and months<10
+order by employee_id asc;
+```
+<br>
+
+## Employee Names.
+Solved on 2024.07.10  
+[SQl - Employee Names.](https://www.hackerrank.com/challenges/name-of-employees/problem?isFullScreen=true)
+> Q. Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+The Employee table containing employee data for a company is described as follows:
+    <p align="center">
+    <img src="figure/employee_table.png" width="25%" height="25%">
+    </p>
+where employee_id is an employee's ID number, name is their name, months is the total number of months they've been working for the company, and salary is the their monthly salary.
+
+A.
+```sql
+select name 
+from employee
+order by name asc;
+```
+<br>
