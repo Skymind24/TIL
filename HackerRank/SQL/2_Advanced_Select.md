@@ -30,10 +30,8 @@ from triangles;
 Solved on 2024.07.26  
 [SQl - The PADS.](https://www.hackerrank.com/challenges/the-pads/problem?isFullScreen=true)
 > Q. Generate the following two result sets:  
-<br>
 Query 1. Query an alphabetically ordered list of all names in OCCUPATIONS, immediately followed by the first letter of each profession as a parenthetical (i.e.: enclosed in parentheses).  
-`For example: AnActorName(A), ADoctorName(D), AProfessorName(P), and ASingerName(S).`
-<br>  
+`For example: AnActorName(A), ADoctorName(D), AProfessorName(P), and ASingerName(S).`  
 Query 2. Query the number of ocurrences of each occupation in OCCUPATIONS. Sort the occurrences in ascending order, and output them in the following format:  
 `There are a total of [occupation_count] [occupation]s.`  
 where [occupation_count] is the number of occurrences of an occupation in OCCUPATIONS and [occupation] is the lowercase occupation name. If more than one Occupation has the same [occupation_count], they should be ordered alphabetically.  
@@ -42,8 +40,9 @@ The OCCUPATIONS table is described as follows:
     <img src="figure/occupation_table.png" width="25%" height="25%">
     </p>
 Occupation will only contain one of the following values: Doctor, Professor, Singer or Actor.
-```
+
 **Sample Output**
+```
 Ashely(P)
 Christeen(P)
 Jane(A)
@@ -59,8 +58,8 @@ There are a total of 2 singers.
 There are a total of 3 actors.
 There are a total of 3 professors.
 ```
-```
 **Explanation**
+```
 The results of the first query are formatted to the problem description's specifications.
 The results of the second query are ascendingly ordered first by number of names corresponding to each profession (2, 2, 3, 3), and then alphabetically by profession.
 ```
