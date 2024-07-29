@@ -132,7 +132,7 @@ local = mysql.connector.connect(
     host = "database-1.c3aacucygorj.ap-northeast-2.rds.amazonaws.com",
     port = 3306,
     user = "root",
-    password = "20162453",
+    password = "********",
     database = "eda_team_6"
 )
 cur = local.cursor(buffered=True)
@@ -195,7 +195,7 @@ local = mysql.connector.connect(
     host = "database-1.c3aacucygorj.ap-northeast-2.rds.amazonaws.com",
     port = 3306,
     user = "mj",
-    password = "1",
+    password = "*",
     database = "eda_team_6"
 )
 cur = local.cursor(buffered=True)
