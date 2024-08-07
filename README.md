@@ -2,7 +2,7 @@
 
 ## HackerRank
 1. SQL
-  * [Basic Select](https://github.com/Skymind24/TIL/blob/0908b9e81c17523d0379e5f624ae850252e67bd9/HackerRank/SQL/1_Basic_Select.md)
+  * [Basic Select](https://github.com/Skymind24/TIL/blob/5d39aeb37f49d6431547a40e516e2347afac5a58/HackerRank/SQL/1_Basic_Select.md)
   * [Advanced Select](https://github.com/Skymind24/TIL/blob/48240e31c89534375ca065249a391581bd87b56d/HackerRank/SQL/2_Advanced_Select.md)
   * []()
 
